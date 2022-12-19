@@ -5,7 +5,7 @@ public class CircleFigure extends AbstractFigure{
     protected int y;
     protected int height;
     protected int width;
-    private final   Color color;
+    protected  Color color;
 
 
     public CircleFigure(int x, int y, int radius, Color color){
@@ -19,13 +19,6 @@ public class CircleFigure extends AbstractFigure{
 
     public int getX(){
         return this.x;
-    }
-    @Override
-    public Color getColor() {
-        if (width % 2 == 0)
-            return Color.blue;
-        else
-            return Color.green;
     }
 
     public int getY(){
@@ -59,5 +52,9 @@ public class CircleFigure extends AbstractFigure{
         return new int[] {y-width, y, y+width};
     }
 
+    @Override
+    public Color getColor() {
+        return color;
+    }
 
 }
