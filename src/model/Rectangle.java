@@ -1,12 +1,21 @@
 package model;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.awt.*;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class Rectangle extends AbstractFigure {
-    private final int x;
-    private final int y;
-    private final int width;
-    private final int height;
+    private int x = 0;
+    private int y = 0;
+    private int width = 0;
+    private int height = 0;
     private Color color = null;
 
     public Rectangle(int x, int y, int width, int height) {
@@ -14,14 +23,6 @@ public class Rectangle extends AbstractFigure {
         this.y = y;
         this.width = width;
         this.height = height;
-    }
-
-    public Rectangle(int x, int y, int width, int height, Color color) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.color = color;
     }
 
     public int getX() {

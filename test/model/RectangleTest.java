@@ -73,4 +73,20 @@ public class RectangleTest {
         Assertions.assertEquals(rectangleWithWidthAndHeightMoreThan255.getColor(), Color.blue);
     }
 
+    @Test
+    public void testNoArgsConstructor() {
+        Rectangle rectangleWithNoArgs = new Rectangle();
+        Assertions.assertEquals(rectangleWithNoArgs.getX(), 0);
+        Assertions.assertEquals(rectangleWithNoArgs.getY(), 0);
+        Assertions.assertEquals(rectangleWithNoArgs.getWidth(), 0);
+        Assertions.assertEquals(rectangleWithNoArgs.getHeight(), 0);
+    }
+
+    @Test
+    public void testEquals() {
+        Rectangle r1 = new Rectangle();
+        Rectangle r2 = new Rectangle(0, 0, 0, 0, null);
+        Assertions.assertEquals(r1, r2);
+    }
+
 }
