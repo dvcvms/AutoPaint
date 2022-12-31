@@ -3,19 +3,27 @@ package model;
 import javax.swing.*;
 import java.awt.*;
 
+import lombok.*;
+
+@ToString(of = {"X","Y"})
+@EqualsAndHashCode(of = {"X", "Y"}, callSuper = false)
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class SquareFigure extends AbstractFigure {
     //private int[] X = new int[] { 50, 50, 250, 250 };
-    private int[] X = new int[4];
-    private int[] Y = new int[4];
+    @NonNull
+    private int[] X;
+    @NonNull
+    private  int[] Y;
     //private int[] Y = new  int[] {50, 250, 250, 50};
     private int[] rgmb_val = new int[4];
     private int n = X.length;
     //Color color = Color.blue;
     //Color[] colors = new Color[] {Color.BLACK, Color.BLUE, Color.CYAN};
-    public SquareFigure(int[] x, int[] y){
+    /*public SquareFigure(int[] x, int[] y){
         X = x;
         Y = y;
-    }
+    }*/
 
     @Override
     public int[] getXCoordinates() {
