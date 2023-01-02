@@ -1,11 +1,15 @@
 package windows;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import model.SquareFigure;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 public class SquareWindow  extends JFrame{
@@ -30,4 +34,6 @@ public class SquareWindow  extends JFrame{
         g2.fill(square);
 
     }
+
+
 }
