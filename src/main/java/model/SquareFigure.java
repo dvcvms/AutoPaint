@@ -1,16 +1,18 @@
 package model;
 import java.awt.*;
 
-public class SquareFigure extends AbstractFigure {
-    private int[] X = new int[4];
-    private int[] Y = new int[4];
-    private int[] rgmb_val = new int[4];
-    private int n = X.length;
-    public SquareFigure(int[] x, int[] y){
-        X = x;
-        Y = y;
-    }
+import lombok.*;
 
+@ToString(of = {"X","Y"})
+@EqualsAndHashCode(of = {"X", "Y"}, callSuper = false)
+@NoArgsConstructor
+@RequiredArgsConstructor
+public class SquareFigure extends AbstractFigure {
+    @NonNull
+    private int[] X;
+    @NonNull
+    private int[] Y;
+    private int[] rgmb_val = new int[4];
     @Override
     public int[] getXCoordinates() {
         return X;
