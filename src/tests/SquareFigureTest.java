@@ -1,13 +1,10 @@
 package tests;
 
 import model.SquareFigure;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import java.awt.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class SquareFigureTest {
     public final int[] X = new int[] { 50, 50, 250, 250 };
