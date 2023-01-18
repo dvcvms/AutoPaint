@@ -1,4 +1,4 @@
-package test.model;
+package test;
 
 import model.CircleFigure;
 import model.SquareFigure;

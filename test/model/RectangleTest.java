@@ -1,6 +1,5 @@
-package test.model;
+package model;
 
-import model.Rectangle;
 import org.junit.jupiter.api.*;
 import java.awt.*;
 

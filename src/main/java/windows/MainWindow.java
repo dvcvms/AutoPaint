@@ -17,7 +17,7 @@ public class MainWindow extends JFrame {
     private final Color buttonColor = new Color(135, 206, 250);
 
     public MainWindow() {
-        super("main.Main");
+        super("Main");
 
         JPanel jPanel = new JPanel();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
