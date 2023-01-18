@@ -4,21 +4,23 @@ import java.awt.*;
 
 public class Triangle extends AbstractFigure {
 
-    private final int[] x = {200, 50, 350};
-    private final int[] y = {50, 350, 350};
+    private final int[] x;
+    private final int[] y;
     private final int number;
 
     private final float area;
     private final float perimeter;
 
-    private final Color color;
+    private Color color;
+    private int shift = 0;
 
-
-    public Triangle() {
-        number = x.length;
-        area = calculateArea();
-        perimeter = calculatePerimeter();
-        color = new Color(0, 127, 255);
+    public Triangle(int[] x, int[] y) {
+        this.x = x;
+        this.y = y;
+        this.number = x.length;
+        this.area = calculateArea();
+        this.perimeter = calculatePerimeter();
+        this.color = generateColor();
     }
 
     @Override
@@ -48,6 +50,40 @@ public class Triangle extends AbstractFigure {
     @Override
     public Color getColor() {
         return color;
+    }
+
+    public Color updateColor() {
+        Color nextColor = generateColor();
+        this.color = nextColor;
+        return nextColor;
+    }
+
+    /**
+     * The color generation algorithm uses a shift of RGP parameters.
+     * The colors are set by a cyclic sequence: shift (current) = 2 * shift (pred) + 1;
+     *
+     * @return Color The return value is a new color.
+     */
+    private Color generateColor() {
+
+        int r;
+        int g;
+        int b;
+
+        // Set RGB parameters
+        r = (x[0] * y[0] + shift) % 256;
+        g = (x[1] * y[1] + shift) % 256;
+        b = (x[2] * y[2] + shift) % 256;
+
+        Color newColor = new Color(r, g, b);
+
+        // Changing the shift value
+        shift = 2 * shift + 1;
+        if (shift > 255) {
+            shift = 0;
+        }
+
+        return newColor;
     }
 
     /**

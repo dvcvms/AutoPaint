@@ -12,7 +12,7 @@ public class MainWindow extends JFrame {
     private final JButton circleButton = new JButton("Efremova Yana");
     private final JButton rectangleButton = new JButton("Дмитрий Поздеев");
     private final JButton squareButton = new JButton("Чередник Арина");
-    private final JButton buttonTriangleWindow = new JButton("Volkov Max");
+    private final JButton triangleButton = new JButton("Volkov Max");
 
     private final Color buttonColor = new Color(135, 206, 250);
 
@@ -34,13 +34,13 @@ public class MainWindow extends JFrame {
         jPanel.setLayout(layout);
         getContentPane().add(jPanel);
 
-        buttonTriangleWindow.setFont(new Font("Times New Roman", Font.BOLD, 25));
-        buttonTriangleWindow.setBackground(buttonColor);
-        jPanel.add(buttonTriangleWindow);
+        triangleButton.setFont(new Font("Times New Roman", Font.BOLD, 25));
+        triangleButton.setBackground(buttonColor);
+        jPanel.add(triangleButton);
 
         getContentPane().add(jPanel);
 
-        buttonTriangleWindow.addActionListener(e -> {
+        triangleButton.addActionListener(e -> {
             TriangleWindow triangleWindow = new TriangleWindow();
             triangleWindow.setVisible(true);
         });

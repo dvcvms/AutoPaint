@@ -10,10 +10,15 @@ public class TriangleWindow extends JFrame {
     private final int width = 400;
     private final int height = 400;
 
-    private final Triangle triangle = new Triangle();
+    private final Triangle triangle;
 
     public TriangleWindow() throws HeadlessException {
         super("Triangle");
+
+        int[] x = {200, 50, 350};
+        int[] y = {50, 350, 350};
+        this.triangle = new Triangle(x, y);
+
         setSize(width, height);
         setLocationRelativeTo(null);
     }
