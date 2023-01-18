@@ -1,15 +1,21 @@
 package model;
 
+import lombok.*;
+
 import java.awt.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class Triangle extends AbstractFigure {
 
-    private final int[] x;
-    private final int[] y;
-    private final int number;
+    private int[] x;
+    private int[] y;
+    private int number;
 
-    private final float area;
-    private final float perimeter;
+    private float area;
+    private float perimeter;
 
     private Color color;
     private int shift = 0;
