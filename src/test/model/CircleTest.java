@@ -1,14 +1,10 @@
-package test;
+package test.model;
 
 import model.CircleFigure;
-import model.SquareFigure;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class CircleTest {
     private final CircleFigure circle = new CircleFigure(120, 120, 100, new Color(10, 38, 73));
@@ -52,16 +48,15 @@ public class CircleTest {
 
     @Test
     public void testGetXCoordinates() {
-        int[] xs =  new int[]{20, 120, 220};
+        int[] xs = new int[]{20, 120, 220};
         Assertions.assertArrayEquals(circle.getXCoordinates(), xs);
     }
 
     @Test
     public void testGetYCoordinates() {
-        int[] ys =  new int[]{20, 120,220};
+        int[] ys = new int[]{20, 120, 220};
         Assertions.assertArrayEquals(circle.getYCoordinates(), ys);
     }
-
 
 
 }

@@ -1,6 +1,8 @@
-package model;
+package test.model;
 
+import model.Rectangle;
 import org.junit.jupiter.api.*;
+
 import java.awt.*;
 
 public class RectangleTest {
@@ -33,25 +35,25 @@ public class RectangleTest {
 
     @Test
     public void testGetArea() {
-        float area = 100*200;
+        float area = 100 * 200;
         Assertions.assertEquals(rectangle.getArea(), area);
     }
 
     @Test
     public void testGetPerimeter() {
-        float perimeter = 2 * (100+200);
+        float perimeter = 2 * (100 + 200);
         Assertions.assertEquals(rectangle.getPerimeter(), perimeter);
     }
 
     @Test
     public void testGetXCoordinates() {
-        int[] xs =  new int[]{10, 110, 110, 10};
+        int[] xs = new int[]{10, 110, 110, 10};
         Assertions.assertArrayEquals(rectangle.getXCoordinates(), xs);
     }
 
     @Test
     public void testGetYCoordinates() {
-        int[] ys =  new int[]{20, 20, 220, 220};
+        int[] ys = new int[]{20, 20, 220, 220};
         Assertions.assertArrayEquals(rectangle.getYCoordinates(), ys);
     }
 

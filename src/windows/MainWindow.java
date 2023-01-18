@@ -1,5 +1,7 @@
 package windows;
 
+import model.*;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -17,7 +19,7 @@ public class MainWindow extends JFrame {
     private final Color buttonColor = new Color(135, 206, 250);
 
     public MainWindow() {
-        super("Main");
+        super("main.Main");
 
         JPanel jPanel = new JPanel();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
