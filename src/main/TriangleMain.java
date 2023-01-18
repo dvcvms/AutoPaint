@@ -1,3 +1,5 @@
+package main;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -6,11 +8,10 @@ import model.serializer.TriangleSerializer;
 
 import java.io.IOException;
 import java.io.FileWriter;
-import java.nio.charset.StandardCharsets;
 
 import java.awt.*;
 
-public class Main {
+public class TriangleMain {
 
     private static final String FILE_PATH = "src/jsons/triangle.json";
 
@@ -25,7 +26,7 @@ public class Main {
                 .registerTypeAdapter(Color.class, new TriangleSerializer())
                 .create();
 
-        try (FileWriter writer = new FileWriter(FILE_PATH, StandardCharsets.UTF_8)) {
+        try (FileWriter writer = new FileWriter(FILE_PATH)) {
             writer.write(gson.toJson(triangle));
         }
 
