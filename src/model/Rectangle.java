@@ -42,12 +42,12 @@ public class Rectangle extends AbstractFigure {
 
     @Override
     public int[] getXCoordinates() {
-        return new int[] {x, x+width, x+width, x};
+        return new int[]{x, x + width, x + width, x};
     }
 
     @Override
     public int[] getYCoordinates() {
-        return new int[] {y, y, y+height, y+height};
+        return new int[]{y, y, y + height, y + height};
     }
 
     private Color generateColor() {
@@ -67,11 +67,11 @@ public class Rectangle extends AbstractFigure {
 
     @Override
     public float getArea() {
-        return width*height;
+        return width * height;
     }
 
     @Override
     public float getPerimeter() {
-        return 2 * (width+height);
+        return 2 * (width + height);
     }
 }

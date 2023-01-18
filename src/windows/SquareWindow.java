@@ -4,19 +4,17 @@ import model.SquareFigure;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Rectangle2D;
 
-
-public class SquareWindow  extends JFrame{
+public class SquareWindow extends JFrame {
     private final int height = 300;
     private final int width = 300;
 
-    public SquareWindow(){
+    public SquareWindow() {
         super("Чередник Арина Квадрат");
         setSize(width, height);
         setLocationRelativeTo(null);
     }
+
     @Override
     public void paint(Graphics g) {
         super.paint(g);

@@ -1,4 +1,4 @@
-package test;
+package test.model;
 
 import model.Triangle;
 import org.junit.jupiter.api.Assertions;

@@ -1,14 +1,16 @@
 package model;
+
 import java.awt.Color;
-public class CircleFigure extends AbstractFigure{
+
+public class CircleFigure extends AbstractFigure {
     protected int x;
     protected int y;
     protected int height;
     protected int width;
-    private final   Color color;
+    private final Color color;
 
 
-    public CircleFigure(int x, int y, int radius, Color color){
+    public CircleFigure(int x, int y, int radius, Color color) {
         this.x = x;
         this.y = y;
         this.height = radius;
@@ -17,9 +19,10 @@ public class CircleFigure extends AbstractFigure{
         this.color = (color);
     }
 
-    public int getX(){
+    public int getX() {
         return this.x;
     }
+
     @Override
     public Color getColor() {
         if (width % 2 == 0)
@@ -28,17 +31,18 @@ public class CircleFigure extends AbstractFigure{
             return Color.green;
     }
 
-    public int getY(){
+    public int getY() {
         return this.y;
     }
 
-    public int getHeight(){
+    public int getHeight() {
         return this.height;
     }
 
-    public int getWidth(){
+    public int getWidth() {
         return this.width;
     }
+
     @Override
     public float getArea() {
         return (float) (Math.PI * Math.sqrt(width));
@@ -51,12 +55,12 @@ public class CircleFigure extends AbstractFigure{
 
     @Override
     public int[] getXCoordinates() {
-        return new int[] {x-width, x, x+width};
+        return new int[]{x - width, x, x + width};
     }
 
     @Override
     public int[] getYCoordinates() {
-        return new int[] {y-width, y, y+width};
+        return new int[]{y - width, y, y + width};
     }
 
 
