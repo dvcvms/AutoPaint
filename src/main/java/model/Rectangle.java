@@ -7,7 +7,14 @@ public class Rectangle extends AbstractFigure {
     private final int y;
     private final int width;
     private final int height;
-    private final Color color;
+    private Color color = null;
+
+    public Rectangle(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
 
     public Rectangle(int x, int y, int width, int height, Color color) {
         this.x = x;
@@ -35,26 +42,36 @@ public class Rectangle extends AbstractFigure {
 
     @Override
     public int[] getXCoordinates() {
-        return new int[] {x, x+width, x+width, x};
+        return new int[]{x, x + width, x + width, x};
     }
 
     @Override
     public int[] getYCoordinates() {
-        return new int[] {y, y, y+height, y+height};
+        return new int[]{y, y, y + height, y + height};
+    }
+
+    private Color generateColor() {
+        if (width < 256)
+            return Color.red;
+        else if (height < 256)
+            return Color.green;
+        else
+            return Color.blue;
     }
 
     @Override
     public Color getColor() {
-        return color;
+        if (color != null) return color;
+        else return generateColor();
     }
 
     @Override
     public float getArea() {
-        return width*height;
+        return width * height;
     }
 
     @Override
     public float getPerimeter() {
-        return 2 * (width+height);
+        return 2 * (width + height);
     }
 }

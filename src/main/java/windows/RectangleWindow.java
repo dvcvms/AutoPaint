@@ -11,8 +11,8 @@ public class RectangleWindow extends JFrame {
 
     public RectangleWindow() {
         super("Дмитрий Поздеев");
-        int width = 2*rect.getX() + rect.getWidth();
-        int height = 2*rect.getY() + rect.getHeight();
+        int width = 2 * rect.getX() + rect.getWidth();
+        int height = 2 * rect.getY() + rect.getHeight();
         setSize(width, height);
         setLocationRelativeTo(null);
     }

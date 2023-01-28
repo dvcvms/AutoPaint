@@ -12,17 +12,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 
-public class SquareWindow  extends JFrame{
+public class SquareWindow extends JFrame {
     private final int height = 300;
     private final int width = 300;
     private final int[] X = new int[] { 50, 50, 250, 250 };
     private int[] Y = new  int[] {50, 250, 250, 50};
 
-    public SquareWindow(){
+    public SquareWindow() {
         super("Чередник Арина Квадрат");
         setSize(width, height);
         setLocationRelativeTo(null);
     }
+
     @Override
     public void paint(Graphics g) {
         super.paint(g);
@@ -34,6 +35,4 @@ public class SquareWindow  extends JFrame{
         g2.fill(square);
 
     }
-
-
 }
