@@ -3,45 +3,42 @@ import java.awt.*;
 
 import lombok.*;
 
-@ToString(of = {"X","Y"})
-@EqualsAndHashCode(of = {"X", "Y"}, callSuper = false)
+@ToString(of = {"x","y"})
+@EqualsAndHashCode(of = {"x", "y"}, callSuper = false)
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class SquareFigure extends AbstractFigure {
     @NonNull
-    private int[] X;
+    private int[] x;
     @NonNull
-    private int[] Y;
-    private int[] rgmb_val = new int[4];
+    private int[] y;
+    private int[] rgb = new int[4];
     @Override
     public int[] getXCoordinates() {
-        return X;
+        return x;
     }
 
     @Override
     public int[] getYCoordinates() {
-        return Y;
+        return y;
     }
 
     @Override
     public Color getColor() {
-        int h = 0;
         for (int i = 0; i < 4; i++) {
-            h = (X[i] + Y[i]) % 255;
-            rgmb_val[i] = h;
+            rgb[i] = (x[i] + y[i]) % 255;
         }
-        Color color = new Color(rgmb_val[0], rgmb_val[1], rgmb_val[2], rgmb_val[3]);
-        return color;
+        return new Color(rgb[0], rgb[1], rgb[2], rgb[3]);
     }
 
     @Override
     public float getArea() {
-        return (float) Math.pow((X[3]-X[0]),2);
+        return (float) Math.pow((x[3]-x[0]),2);
     }
 
     @Override
     public float getPerimeter() {
-        return ((X[3]-X[0])+(Y[1]-Y[0]))*2;
+        return ((x[3]-x[0])+(y[1]-y[0]))*2;
     }
 
 }

@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         JFrame myWindow = new MainWindow();
         myWindow.setVisible(true);
-        int[] X = new int[] { 50, 50, 250, 250 };
-        int[] Y = new  int[] {50, 250, 250, 50};
-        SquareFigure squareFigure = new SquareFigure(X, Y);
+        int[] x = new int[] { 50, 50, 250, 250 };
+        int[] y = new  int[] {50, 250, 250, 50};
+        SquareFigure squareFigure = new SquareFigure(x, y);
         serialezedSquare(squareFigure);
     }
     private static void serialezedSquare(SquareFigure squareFigure) throws IOException {
